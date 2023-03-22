@@ -1,0 +1,82 @@
+@font-face {
+     font-family: 'Six Caps';
+     src: url(../fonts/Six_Caps/SixCaps-Regular.ttf);
+
+}
+
+@font-face {
+     font-family: 'Roboto';
+     src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+
+body {
+     background-image: url(../images/art-background4.jpg);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+
+}
+
+header {
+     background-color: rgb(255, 255, 255);
+     width: 20rem;
+     height: 7rem;
+     padding: 20px;
+     margin-left: 9rem;
+}
+
+header h1 {
+     font-family: 'Six Caps';
+     font-size: 3.5rem;
+}
+
+header h2 {
+     font-family: 'Roboto';
+     font-size: 0.9rem;
+}
+
+article {
+     width: 34rem;
+     height: 6rem;
+     margin: 6rem 0 0 9rem;
+     align-items: center;
+     background: rgb(255, 255, 255, 0.5);
+}
+
+article h2 {
+     font-family: 'Roboto';
+     background-color: rgba(255, 255, 255, 0.656);
+     font-size: 1.5rem;
+     padding: 1rem;
+     font-weight: bolder;
+}
+
+article p {
+     padding: 2rem 5rem 0 1rem;
+}
+
+article>p:nth-child(2) {
+     font-family: serif;
+     background-color: rgb(255, 255, 255, 0);
+     font-size: 1.9rem;
+     font-weight: 700;
+}
+
+article>p:nth-child(3) {
+     background-color: rgba(0, 0, 0, 0.314);
+     font-size: 1.5rem;
+     height: 3rem;
+     width: 15rem;
+     padding: 1rem 1rem 0rem 1rem;
+     color: white;
+     margin: 20px;
+
+}
+
+footer {
+     font-family: 'Roboto';
+     background: rgba(255, 255, 255);
+     font-size: small;
+     padding: 1rem 0 1rem 1.5rem;
+}
