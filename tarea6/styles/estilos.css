@@ -1,0 +1,50 @@
+body {
+     margin: 0;
+}
+
+header {
+     height: 400px;
+     background: orange;
+}
+
+nav {
+     height: 75px;
+     background: red;
+}
+
+.verde-bandera {
+     height: 200px;
+     background: green;
+     margin-bottom: 75px;
+}
+
+.verde-lima {
+     width: 50%;
+     height: 400px;
+     position: absolute;
+}
+
+.verde-lima:nth-child(1){
+     left: 0;
+     background-color: lime;
+}
+
+main {
+     margin: 75px 100px 75px 100px;
+     height: 500px;
+     background: yellow;
+}
+
+footer {
+     height: 100px;
+     background: black;
+     color: white;
+}
+
+#suscripcion {
+     height: 400px;
+     background: gray;
+}
+
+
+

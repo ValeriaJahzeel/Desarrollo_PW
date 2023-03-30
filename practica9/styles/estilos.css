@@ -1,0 +1,258 @@
+* {
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ 
+ header {
+     background-color: cornflowerblue;
+     list-style: none;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     padding: 1rem;
+     max-width: 100%;
+ }
+ 
+ header a {
+     color: white;
+     text-decoration: none;
+ }
+ 
+ header>a:nth-child(1) {
+     font-size: 2rem;
+     padding: 0 3rem;
+     font-weight: 600px;
+ }
+ 
+ header ul {
+     list-style: none;
+     display: flex;
+     font-size: 1rem;
+ }
+ 
+ main {
+     display: flex;
+     height: 100vh;
+ }
+ 
+ .barra-izquierda {
+     background-color: white;
+     max-width: 25%;
+     font-size: 1rem;
+     padding-top: 0.2rem;
+ }
+ 
+ .juan-lopez {
+     background-color: #E5E19A;
+     padding: 1rem;
+     color: black;
+ }
+ 
+ .navegacion {
+     background-color: #E5E5E4;
+     padding: 1rem;
+     margin: 2rem 0;
+ }
+ 
+ .navegacion ul {
+     list-style: none;
+     font-size: 1rem;
+     font-weight: 500px;
+     vertical-align: baseline;
+     line-height: 1.5;
+ }
+ 
+ .mensaje-fondo {
+     background-color: #E5E5E4;
+     padding: 1rem;
+ }
+ 
+ .mensaje-titulo {
+     background-color: #b7cfe7;
+     width: 100%;
+     height: 3%;
+     font-size: 1rem;
+ }
+ 
+ .mensaje-titulo h3 {
+     padding: 1rem;
+ }
+ 
+ .mensaje-contenido {
+     background-color: #ffff;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ 
+ }
+ 
+ .mensaje-contenido ul {
+     list-style: none;
+     font-size: 1rem;
+     font-weight: 500;
+     vertical-align: baseline;
+ }
+ 
+ .mensaje-contenido ul img {
+     float: left;
+     padding-right: 1rem;
+     padding-top: 2rem;
+ }
+ 
+ .mensaje-contenido ul p {
+     padding-left: 20%;
+     padding-top: 2rem;
+ }
+ 
+ 
+ .enmedio {
+     background-color: white;
+     margin: 0 2rem;
+     max-width: 50%;
+ }
+ 
+ .enmedio-barra {
+     background-color: #F8F8F8;
+     margin: 1rem 0;
+     padding: 0.5rem 0;
+     font-size: 1.1rrem;
+ }
+ 
+ .enmedio span {
+     font-size: 2rem;
+     font-weight: 600;
+     padding-top: 5rem;
+     margin-top: 5rem;
+ }
+ 
+ .enmedio-direc {
+     width: 100%;
+     float: left;
+     padding: 1rem 0;
+     font-size: 1.1rem;
+ }
+ 
+ .enmedio-direc-izq {
+     float: left;
+ }
+ 
+ .enmedio-direc-der {
+     float: right;
+ }
+ 
+ hr {
+     border: 1.5px solid #D3D3CD;
+     border-radius: 300px;
+     height: 0px;
+     text-align: center;
+ }
+ 
+ th {
+     font-size: 1.2rem;
+     text-align: left;
+ }
+ 
+ td {
+     font-size: 1.2rem;
+ }
+
+ .enmedio-boton{
+     background: cornflowerblue;
+     display: block;
+     width: 10rem;
+     height: 1.4rem;
+     text-align: center;
+     color: white;
+     
+ }
+ .enmedio-boton a{
+     color: white;
+     text-decoration: none;
+ }
+ 
+ .barra-derecha {
+     max-width: 25%;
+     margin-right: 2%;
+ }
+ 
+ .derecha-cambios {
+     background-color: #f1f1f0;
+     padding: 1rem;
+     margin: 0.2rem 0 2rem 0;
+ }
+ 
+ .cambios-titulo{
+     background-color: #b7cfe7;
+     width: 100%;
+     height: 3%;
+     font-size: 1rem;
+ }
+ 
+ .cambios-titulo h3 {
+     padding: 1rem; 
+ }
+ 
+ .cambios-contenido {
+     background-color: #ffff;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+ 
+ .cambios-contenido ul {
+     list-style: none;
+     font-size: 1rem;
+     font-weight: 500;
+ }
+ .cambios-contenido span{
+     float:inline-start;
+     margin: 0 1rem;
+     font-size: 2rem;
+     clear:left;
+     color: grey;
+ }
+ .cambios-contenido ul p {
+     padding: 1rem;
+ }
+ 
+ .derecha-vendedores {
+     background-color: #f1f1f0;
+     padding: 1rem;
+ }
+ 
+ .vendedores-titulo {
+     background-color: #b7cfe7;
+     width: 100%;
+     height: 3%;
+     font-size: 1rem;
+ }
+ 
+ .vendedores-titulo h3 {
+     padding: 1rem;
+ }
+ 
+ .vendedores-contenido {
+     background-color: #ffff;
+     display: flex;
+     flex-direction: column;
+ 
+ }
+ .vendedores-contenido ul img {
+     float: left;
+     padding-top: 1rem;
+     clear:left;
+ }
+ .vendedores-contenido ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+  }
+  .vendedores-contenido li {
+     float: left;
+     clear:left;
+     
+  }
+  .vendedores-contenido li p {
+     display: block;
+     padding: 2rem 1rem 1rem 4rem;
+     margin: 0;
+  }
