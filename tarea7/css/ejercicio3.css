@@ -5,9 +5,9 @@ body{
 /*agregar un media query para el body
 y definir el tamaño de letra para el cuerpo
 font-size: 16px;*/
-@media (max-width: 500px) {
+@media (max-width: 1920px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -42,7 +42,7 @@ header {
 }
 
 /*cambiar el tamaño del encabezado para dispositivos moviles*/
-@media (max-width: 500px) {
+@media (max-width: 1920px) {
   header {
     height: 300px;
     line-height: 1.2;
@@ -51,7 +51,7 @@ header {
 
 #logo{
   /*font-size: 40px;*/
-  font-size: 2.5em;
+  font-size: 40px;
 }
 
 #links{
@@ -87,7 +87,7 @@ header h1 {
 
 header h1 em {
   /*font-size: 20px;*/
-  font-size: 1.25em;
+  font-size: 20px;
   font-style: normal;
   letter-spacing: 1px;
 }
@@ -95,12 +95,12 @@ header h1 em {
 header h1 strong {
   font-style: normal;
   /*font-size: 68px;*/
-  font-size: 4.25em;
+  font-size: 68px;
   letter-spacing: 1px;
 }
 
 /*agregar un media querie*/
-@media (max-width: 500px) {
+@media (max-width: 1920px) {
   header h1 strong {
     font-size: 2em;
     letter-spacing: 4px;
@@ -110,7 +110,7 @@ header h1 strong {
 header h1 a {
   /*font-size: 18px;
   cambiar el tamaño de la fuente*/
-  font-size: 0.9em;
+  font-size: 18px;
 }
 
 section {
@@ -118,7 +118,7 @@ section {
   text-align: center;
 }
 /*agregar un media query*/
-@media (max-width: 500px) {
+@media (max-width: 1920px) {
   section {
     margin: 40px 10px;
   }
@@ -133,13 +133,13 @@ section {
 
 #main h1 {
   /*font-size: 38px;*/
-  font-size: 1.75em;
+  font-size: 38px;
 }
 
 
 p {
   /*line-height: 36px;*/
-   line-height: 2.25em;
+   line-height: 36px;
 }
 
 footer {
@@ -158,8 +158,8 @@ address {
 }
 
 #details div {
-  /*  width: calc(50% - 10px);
-    margin: 50px 0;*/
+    width: calc(50% - 10px);
+    margin: 50px 0;
    flex-grow: 1;
    padding: 20px;
 }
@@ -173,7 +173,7 @@ address {
 /*agregar un media query para organizar las imagenes
 como columnas y modificar la forma en que se calcula
 #details div*/
-@media (max-width: 500px) {
+@media (max-width: 1920px) {
   #details {
     flex-direction: column;
   }
@@ -208,7 +208,7 @@ como columnas y modificar la forma en que se calcula
   margin: 5px 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1920px) {
   #links {
     display: none;
   }
