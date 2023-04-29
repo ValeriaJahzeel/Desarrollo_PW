@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+ 
+    <style>
+    body {
+        text-align: center;
+        font-family:Arial;
+    }
+    h2 {
+        padding: 1em;
+        margin: 0em;
+    }
+    article {
+        background-color: rgb(173, 159, 255);
+        border-radius: 1em;
+        margin: auto;
+        padding: 15px;
+        display: inline-block;
+    }
+ 
+    #numeros {
+        display: inline-block;
+        background-color: #808080;
+        margin-top:15px;
+    }
+    #numeros>div {
+        float: left;
+        width: 50px;
+        height: 50px;
+        background-color: #d5c89d;
+        line-height:50px;
+        font-size:1.2em;
+        cursor:pointer;
+        border:2px solid;
+        border-color:#fdf6d8 #9e9067 #9e9067 #fdf6d8;
+    }
+    #numeros>div.empty {
+        background-color: #fff;
+        border:2px solid #fff;
+        cursor:inherit;
+    }
+ 
+    #resultado {
+        color:Red;
+        font-size:2em;
+        padding: 20px 0;
+    }
+    .hide {
+        display:none;
+    }
+    #longitud {
+        text-align:right;
+        padding-right:10px;
+        width:50px;
+    }
+    </style>
+</head>
+<body>
+    <article>
+        <h2>PUZZLE</h2>
+ 
+        <div>
+            <form onsubmit="return establecerLongitud()">
+            Longitud de la fila: <input type="number" id="longitud" value="3">
+            <input type="submit" value="Barajar">
+            </form>
+        </div>
+ 
+        <div id="resultado" class="hide">Completado !!!</div>
+ 
+        <div id="numeros"></div>
+    </article>
+</body>
+</html>
+ 
+<script>
+let longitud=3;
+ 
+/**
+ * Función para establecer la longitud del puzzle
+ */
+function establecerLongitud() {
+    longitud=+document.getElementById("longitud").value;
+    init(longitud);
+    return false;
+}
+ 
+window.onload = init(longitud);
+ 
+// funcion que devuelve n numeros aleatorios sin repetirse
+function* random(n) {
+    let elem=Array.from({length: n}, (v, i) => i);
+    while (elem.length>0) {
+        let pos=Math.floor(Math.random()*elem.length);
+        yield elem.splice(pos,1)[0];
+    }
+}
+ 
+function init(longitud) {
+    const numeros=document.getElementById("numeros");
+    numeros.innerHTML="";
+    if (longitud<3) {
+        return;
+    }
+ 
+    // ponemos los numeros aleatoriamente
+    numeros.style.width=(longitud*54)+"px";
+    for (let i=0, iterator=random(longitud*longitud); i<(longitud*longitud); i++) {
+        let num=iterator.next().value;
+        numeros.innerHTML+=(num ? "<div>"+num : "<div class='empty'>")+"</div>";
+    }
+ 
+    puzzle();
+}
+ 
+function puzzle() {
+ 
+    // cremos los eventos para iniciar a arrastrar las imagenes
+    const numeros=document.querySelectorAll("#numeros div");
+    numeros.forEach(el => {
+        el.addEventListener("click", click, false);
+    });
+ 
+    function click(e) {
+        const divs=document.querySelectorAll("#numeros div");
+        const posicion=getPos(this);
+        const contenido=getContenido(posicion);
+        if (contenido=="") {
+            return;
+        }
+ 
+        if (getContenido(posicion-longitud)=="") {
+            // subimos
+            moverBlanco(divs[posicion-longitud], this);
+        } else if (getContenido(posicion+longitud)=="") {
+            // bajamos
+            moverBlanco(divs[posicion+longitud], this);
+        } else if (getContenido(posicion+1)=="" && (posicion+1)%longitud!=0) {
+            // derecha
+            moverBlanco(divs[posicion+1], this);
+        } else if (getContenido(posicion-1)=="" && posicion%longitud!=0) {
+            // izquierda
+            moverBlanco(divs[posicion-1], this);
+        }
+ 
+        completado();
+    }
+ 
+    function moverBlanco(elFrom, elDest) {
+        elFrom.innerHTML=elDest.innerHTML;
+        elFrom.classList.remove("empty");
+        elDest.innerHTML="";
+        elDest.classList.add("empty");
+    }
+ 
+    function getPos(el) {
+        const divs=document.querySelectorAll("#numeros div");
+        for (let i=0; i<longitud*longitud; i++) {
+            if (divs[i]==el) {
+                return i;
+            }
+        }
+    }
+ 
+    function getContenido(pos) {
+        if (pos<0 || pos>=longitud*longitud) {
+            return -1;
+        }
+        const divs=document.querySelectorAll("#numeros div");
+        return divs[pos].innerHTML;
+    }
+ 
+    /**
+     * Funcion que verifica si se ha completado
+     */
+    function completado() {
+        const divs=document.querySelectorAll("#numeros div");
+        resultado.classList.add("hide");
+ 
+        if ([...divs].splice(0, divs.length-1).every((el, index) => el.innerHTML==index+1)) {
+            resultado.classList.remove("hide");
+        }
+    }
+}
+</script>

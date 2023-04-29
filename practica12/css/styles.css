@@ -1,0 +1,22 @@
+html{
+     padding: 1em;
+}
+.contenedor{
+     background-color: black;
+     width: 400px;
+     padding: 1em 1em 1em 1em;
+     display: grid;
+     grid-template-columns: repeat(4, 100px); 
+     grid-template-rows: repeat(4, 100px);
+     column-gap: 0.2em;
+     row-gap: 0.2em;
+}
+
+.item{
+     background-color: blueviolet;
+     color: white;
+     padding: 1em 1em 1em 1em;
+     border: 1px solid orange;
+     font-size: larger;
+     font-family: monospace;
+}

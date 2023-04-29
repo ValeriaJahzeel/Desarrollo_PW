@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(0, 255, 157);
+
+}
+
+.container {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 140, 255);
+    color: rgb(255, 238, 0);
+    font-size: 24px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#stats {
+    margin-top: 10px;
+}
