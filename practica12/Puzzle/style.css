@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 3em;
+    background-color: purple;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+}
+
+#tiempo {
+    padding-left: 1em;
+}
+
+#tt {
+    display: inline;
+    padding-left: 1em;
+}
+
+#puzzle {
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    background-color: whitesmoke;
+    width: 30em;
+}
+
+#casillas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(7em, auto);
+    padding: 1em;
+}
+
